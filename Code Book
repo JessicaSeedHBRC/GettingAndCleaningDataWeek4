@@ -1,0 +1,16 @@
+Code Book
+
+Standard Deviation and Meandone:
+  mean_std.select <- grep('mean|std', features)
+Renamed the variables:
+  nameNew <- names(data.sub)
+  nameNew <- gsub("[(][)]", "", nameNew)
+  nameNew <- gsub("^t", "TimeDomain_",nameNew)
+  nameNew <- gsub("^f", "FrequencyDomain_", nameNew)
+  nameNew <- gsub("Acc", "Accelerometer", nameNew)
+  nameNew <- gsub("Gyro", "Gyroscope",nameNew)
+  nameNew <- gsub("Mag", "Magnitude", nameNew)
+  nameNew<- gsub("-mean-", "_Mean_", nameNew)
+  nameNew <- gsub("-std-", "_StandardDeviation_", nameNew)
+  nameNew <- gsub("-", "_", nameNew)
+  #Set the names to be the string forma
