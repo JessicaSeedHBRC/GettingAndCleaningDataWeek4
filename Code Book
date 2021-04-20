@@ -1,7 +1,22 @@
 Code Book
 
-Standard Deviation and Meandone:
+This repository is an assignmnet for the Coursera Course "Getting and Cleaning Data". The process creates an R Script that does:
+  1. Download and decompresses the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+  2. Bring the different data sets in to R including
+      Features
+      Training Data Set - Subjec_train, X_train and y_train
+      Test data set - x test, y activity and subject test
+  3. Merges the training and the test sets to create one data set.
+  4. Extracts only the measurements on the mean and standard deviation for each measurement. 
+  5. Uses descriptive activity names to name the activities in the data set
+  6. Appropriately labels the data set with descriptive variable names. 
+  7. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+  
+The data set was secured from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+
+Standard Deviation and Mean Calculation:
   mean_std.select <- grep('mean|std', features)
+  
 Renamed the variables:
   nameNew <- names(data.sub)
   nameNew <- gsub("[(][)]", "", nameNew)
